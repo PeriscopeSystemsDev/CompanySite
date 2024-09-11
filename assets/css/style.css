@@ -11,7 +11,7 @@
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
+  /* color: #444444; */
 }
 
 a {
@@ -83,6 +83,7 @@ h6 {
   transition: all 0.5s;
   padding: 22px 0;
   background: #fff;
+  /* background: #444444; */
 }
 
 #header.header-scrolled {
@@ -90,9 +91,14 @@ h6 {
   padding: 12px 0;
 }
 
+#header .logo {
+  display: flex;
+  align-items: center;
+}
+
 #header .logo h1 {
   font-size: 30px;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   line-height: 1;
   font-weight: 700;
@@ -101,7 +107,9 @@ h6 {
 
 #header .logo h1 a,
 #header .logo h1 a:hover {
-  color: #222222;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #2dd9ff;
   text-decoration: none;
 }
 
@@ -452,6 +460,129 @@ h6 {
 
   100% {
     transform: translateY(-10px);
+  }
+}
+/*--------------------------------------------------------------
+#Product section
+--------------------------------------------------------------*/
+
+/*
+ * Dummy devices (replace them with your own or something else entirely!)
+ */
+
+ .product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device-2 {
+  position: absolute;
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 10%;
+  background-color: #e5e5e5;
+}
+
+.product-device-img-1 {
+  position: absolute;
+  top: 5%;
+  width: 93%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  border-radius: 5px;
+}
+.product-device-img-2 {
+  position: absolute;
+  /* top: 10%; */
+  width: 93%;
+  right: 10px;
+  bottom: 5%;
+  left: 10px;
+  content: "";
+  border-radius: 5px;
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 5px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(30deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(30deg);
+  }
+  100% {
+    transform: translateY(0) rotate(30deg);
+  }
+}
+
+.product-device.bounce {
+  animation: bounce 2s infinite;
+}
+
+.btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  /* color: #2dd9ff; */
+  color: white;
+
+  border: 2px solid white;  /* Border color */
+}
+
+.btn-get-started:hover {
+  background: #2dd9ff;
+  color: #fff;
+}
+
+.position-relative {
+  position:relative;
+  background: linear-gradient(135deg, #4c4cfc, #2dd9ff, /* #ffc107,*/ #61fa95); 
+  background-size: 400% 400%;
+  border-radius: 50px;
+  animation: gradientAnimation 15s ease infinite;
+  color: white; /* Make text stand out against the background */
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
   }
 }
 
@@ -879,6 +1010,33 @@ section {
   background: #eef7fc;
 }
 
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: .75rem;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: .75rem;
+}
+
+.text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+.text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+.text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+
+.card-cover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.feature-icon-small {
+  width: 3rem;
+  height: 3rem;
+}
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1175,6 +1333,14 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
+
+/* Place to Put styling for grid layout of team */
+
+
+
+
+
+
 .team .member {
   margin-bottom: 20px;
   overflow: hidden;
@@ -1200,7 +1366,7 @@ section {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 40px;
+  height: 80px;
   opacity: 0;
   transition: ease-in-out 0.3s;
   background: rgba(255, 255, 255, 0.85);
@@ -1227,7 +1393,7 @@ section {
 }
 
 .team .member .social i {
-  font-size: 18px;
+  font-size: 40px;
   margin: 0 2px;
 }
 
