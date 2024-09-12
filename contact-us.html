@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Periscope Systems - Contact Us</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Vesperr
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/vesperr-free-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <div id="header"></div>
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Contact Us</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="row content">
+          <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <h1>Technical Support</h1>
+            <h4> support@periscopesystems.com</link> </h4>
+            <br>
+            <h1>Sales</h1>
+            <h4>jacob.reynolds@periscopesystems.com</h4>
+            <h4>alec.peal@periscopesystems.com</h4>
+          </div>
+   
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+            <form id="contactForm">
+
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                <label for="email">Your Email address</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Email Subject Line" id="subject" maxlength="150" style="resize: none;"></textarea>
+                <label for="subject">Subject Line</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <textarea class="form-control" placeholder="Your message here." id="message" style="height: 100px"></textarea>
+                <label for="message">Your Message Here</label>
+              </div>
+      
+              <button class="btn btn-contact-us" type="button" onclick="sendEmail()">Send</button>
+          </form>
+    
+          </div>  
+        </div>
+    
+        <script>
+            function sendEmail() {
+                // Get values from the form fields
+                var email = document.getElementById('email').value;
+                var subject = document.getElementById('subject').value;
+                var message = document.getElementById('message').value;
+    
+                // Basic validation
+                if (email && subject && message) {
+                    // Create the mailto URL
+                    var mailtoLink = 'mailto:support@periscopesystems.com?subject=' + 
+                    encodeURIComponent(subject) +
+                    '&body=' + encodeURIComponent(message) +
+                    '&from=' + encodeURIComponent(email);
+    
+                    // Open the user's email client
+                    window.location.href = mailtoLink;
+                } else {
+                    alert('Please fill out all fields.');
+                }
+            }
+        </script>
+      </div>
+    </section>
+    <!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <div id="footer"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+    <!-- Load Header and Footer -->
+    <script>
+      // Load header
+      fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+  
+      // Load footer
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+
+</html>

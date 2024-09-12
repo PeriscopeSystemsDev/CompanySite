@@ -562,6 +562,25 @@ h6 {
   color: #fff;
 }
 
+.btn-contact-us {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  color: #2dd9ff; 
+
+  border: 2px solid #2dd9ff;  /* Border color */
+}
+
+.btn-contact-us:hover {
+  background: #2dd9ff;
+  color: #fff;
+}
+
 .position-relative {
   position:relative;
   background: linear-gradient(135deg, #4c4cfc, #2dd9ff, /* #ffc107,*/ #61fa95); 
