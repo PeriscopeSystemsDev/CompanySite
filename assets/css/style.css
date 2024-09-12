@@ -511,6 +511,10 @@ h6 {
   border-radius: 5px;
 }
 
+.corner-rounded{
+  border-radius: 50px;
+}
+
 .product-device::before {
   position: absolute;
   top: 10%;
