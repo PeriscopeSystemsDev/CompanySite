@@ -1038,6 +1038,66 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Use Cases Section
+--------------------------------------------------------------*/
+
+.use-cases-section {
+  padding: 60px 0;
+  background-color: #f7fbfe;
+}
+
+.use-case-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.use-case-image-container,
+.use-case-text-container {
+  padding: 20px;
+}
+
+.use-case-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.use-case-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #222222;
+}
+
+.use-case-description {
+  font-size: 16px;
+  color: #555555;
+}
+
+.order-lg-1 {
+  order: 1;
+}
+
+.order-lg-2 {
+  order: 2;
+}
+
+@media (max-width: 991px) {
+  .use-case-row {
+    flex-direction: column;
+  }
+
+  .order-lg-1, .order-lg-2 {
+    order: unset;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
 .testimonials .testimonial-wrap {
