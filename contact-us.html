@@ -59,10 +59,10 @@
       <div class="container">
         <div class="row content">
           <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <h1>Technical Support</h1>
-            <h4> support@periscopesystems.com</link> </h4>
+            <h3><b>Support</b> </h3>
+            <h4>support@periscopesystems.com</h4>
             <br>
-            <h1>Sales</h1>
+            <h3><b>Sales</b></h3>
             <h4>jacob.reynolds@periscopesystems.com</h4>
             <h4>alec.peal@periscopesystems.com</h4>
           </div>
@@ -73,6 +73,16 @@
               <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="email" placeholder="name@example.com">
                 <label for="email">Your Email address</label>
+              </div>
+
+              <div class="form-floating mb-3">
+                <select class="form-select" id="recipient" aria-label="Floating label select example">
+                  <option selected>Select a recipient</option>
+                  <option  value="support@periscopesystems.com">support@periscopesystems.com</option>
+                  <option value="jacob.reynolds@periscopesystems.com">jacob.reynolds@periscopesystems.com</option>
+                  <option value="alec.peal@periscopesystems.com">alec.peal@periscopesystems.com</option>
+                </select>
+                <label for="recipient">Who do you want to contact?</label>
               </div>
 
               <div class="form-floating mb-3">
@@ -95,14 +105,15 @@
             function sendEmail() {
                 // Get values from the form fields
                 var email = document.getElementById('email').value;
+                var recipient = document.getElementById('recipient').value;
                 var subject = document.getElementById('subject').value;
                 var message = document.getElementById('message').value;
     
                 // Basic validation
                 if (email && subject && message) {
                     // Create the mailto URL
-                    var mailtoLink = 'mailto:support@periscopesystems.com?subject=' + 
-                    encodeURIComponent(subject) +
+                    var mailtoLink = 'mailto:' + encodeURIComponent(recipient) + 
+                    '?subject=' + encodeURIComponent(subject) +
                     '&body=' + encodeURIComponent(message) +
                     '&from=' + encodeURIComponent(email);
     
