@@ -597,6 +597,7 @@ h6 {
 }
 
 /* Center the form container and set a max-width for desktop */
+
 .form-container {
   display: flex;
   justify-content: center;
