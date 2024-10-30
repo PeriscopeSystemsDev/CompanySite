@@ -596,6 +596,21 @@ h6 {
   100% { background-position: 0% 50%; }
 }
 
+/* Center the form container and set a max-width for desktop */
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;           /* Space around the form */
+  box-sizing: border-box;
+}
+
+/* Styling for the iframe to ensure it's responsive */
+.form-container iframe {
+  max-width: 640px;        /* Limit width on desktop */
+  width: 100%;             /* Full width for smaller screens */
+  border: none;
+}
+
 /*
  * Extra utilities
  */
@@ -607,6 +622,31 @@ h6 {
   .flex-md-equal > * {
     flex: 1;
   }
+}
+
+/*--------------------------------------------------------------
+# Dark Mode Styles
+--------------------------------------------------------------*/
+body.dark-mode {
+  background-color: #a4a4a4;
+}
+
+header.dark-mode, footer.dark-mode {
+  background-color: #444444;
+}
+
+button#theme-toggle {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #ffffff;
+  border: 1px solid #444444;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*--------------------------------------------------------------
