@@ -250,6 +250,34 @@ h6 {
 /**
 * Mobile Navigation 
 */
+
+
+@media (max-width: 991px) {
+  /* Show mobile nav toggle */
+  .navbar ul {
+    display: none;
+  }
+  
+  .navbar-mobile ul {
+    display: block !important;
+    padding: 0;
+    list-style: none;
+    margin-top: 1em;
+    text-align: left;
+  }
+
+  /* Dropdown active styling */
+  .navbar-mobile .dropdown ul {
+    display: none;
+  }
+
+  .navbar-mobile .dropdown .dropdown-active {
+    display: block !important;
+  }
+}
+
+
+
 .mobile-nav-toggle {
   color: #222222;
   font-size: 28px;
