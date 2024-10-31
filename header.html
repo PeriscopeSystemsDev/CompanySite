@@ -88,5 +88,30 @@
   </header>
   <!-- End Header -->
 
+  <script>
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navbar = document.querySelector('#navbar');
+    
+    // Toggle navbar-mobile class on click
+    mobileNavToggle.addEventListener('click', function() {
+      navbar.classList.toggle('navbar-mobile');
+      this.classList.toggle('bi-x'); // Toggle icon from hamburger to 'x'
+    });
+    
+    // Handle dropdowns within mobile view
+    document.querySelectorAll('.navbar .dropdown > a').forEach((element) => {
+      element.addEventListener('click', function(e) {
+        if (navbar.classList.contains('navbar-mobile')) {
+          e.preventDefault();
+          this.nextElementSibling.classList.toggle('dropdown-active');
+        }
+      });
+    });
+  </script>
+  
+  <br>
+  <br>
+  <br>
+
 </body>
   
